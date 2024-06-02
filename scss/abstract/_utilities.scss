@@ -1,0 +1,340 @@
+.star-rating {
+    display: inline-block;
+    font-size: 0;
+    position: relative;
+}
+
+.star {
+    font-size: 24px;
+    color: #ccc;
+    display: inline-block;
+    position: relative;
+}
+
+.star-filled {
+    color: #e0ba6f;
+}
+
+.star-half::before {
+    content: '\u2605';
+    /* Unicode star character */
+    color: #e0ba6f;
+    position: absolute;
+    width: 50%;
+    overflow: hidden;
+    display: inline-block;
+    left: 0;
+}
+
+.star-half {
+    position: relative;
+    display: inline-block;
+    color: #ccc;
+}
+
+.customer-feedback {
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: $box-shadow;
+    margin: 15px auto;
+}
+
+.customer-feedback h3 {
+    font-size: 14px;
+    color: $color-header;
+    margin-bottom: 10px;
+
+    @include for-size(phone-only) {
+        font-size: 13px !important;
+    }
+}
+
+.feedback-summary {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.rating-overview {
+    text-align: center;
+    padding: 16px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: #f1f1f2;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.rating-overview .stars {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.rating-breakdown {
+    width: 50%;
+}
+
+.rating-value {
+    font-size: 25px;
+    font-weight: 700;
+    color: $primary;
+}
+
+.rating-total {
+    font-size: 14px;
+    color: $color-header;
+    margin-top: 10px;
+}
+
+.rating-breakdown .bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.rating-breakdown .bar .stars {
+    width: 80px;
+}
+
+.rating-breakdown .bar .bar-outer {
+    flex: 1;
+    height: 10px;
+    background: #eee;
+    margin-left: 10px;
+    position: relative;
+    border-radius: 7px;
+}
+
+.rating-breakdown .bar .bar-inner {
+    height: 100%;
+    background: $primary;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 7px;
+}
+
+.count {
+    font-size: 11px;
+    margin-left: 10px;
+    color: $color-text;
+}
+
+.reviews {
+    margin-top: 20px;
+}
+
+.review {
+    border-top: 1px solid #eee;
+    padding: 10px 0;
+
+    &-text {
+        font-size: 11px;
+        margin: 10px 0px;
+        color: $color-text;
+    }
+
+    &-meta {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-date {
+        font-size: 10px;
+        color: $color-header;
+    }
+
+    &-verified {
+        color: green;
+        font-size: 11px;
+        font-weight: 400;
+    }
+}
+
+.review .stars {
+    display: flex;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease-in-out;
+
+    &__content {
+        background: white;
+        padding: 20px;
+        border-radius: 5px;
+        width: 90%;
+        max-width: 550px;
+        position: relative;
+        margin-top: 70px;
+
+        @include for-size(phone-only) {
+            width: 100%;
+            margin-top: 95px;
+            height: 100vh;
+        }
+    }
+
+    &__header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    &-title {
+        font-size: 13px;
+        font-weight: 600;
+        color: $color-header;
+
+        @include for-size(phone-only) {
+            flex-basis: 75%;
+        }
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 10px;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        border: $border;
+        border-radius: 7px;
+    }
+
+    &__product {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        margin-top: 15px;
+
+        @include for-size(phone-only) {
+            margin-top: 30px;
+        }
+
+        img {
+            max-width: 100px;
+            margin-right: 10px;
+
+            @include for-size(phone-only) {
+                max-width: 120px;
+            }
+        }
+
+        &-details {
+
+            &-box {
+                margin-top: 10px;
+            }
+
+            h3 {
+                font-size: 12.5px;
+                color: $color-header;
+                font-weight: 400;
+
+                @include for-size(phone-only) {
+                    font-size: 11.5px !important;
+                }
+            }
+
+            p {
+                font-size: 15px;
+                font-weight: 600;
+                margin: 10px 0px;
+                color: $color-header;
+            }
+
+            span {
+                font-size: 15px;
+                font-weight: 500;
+                color: $color-text;
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.modal__form {
+    margin-top: 15px;
+
+    h3 {
+        font-size: 11.5px;
+        font-style: italic;
+        font-weight: 500;
+        margin-bottom: 15px;
+        color: $color-text;
+
+        @include for-size(phone-only) {
+           font-size: 11px !important;
+        }
+    }
+
+    &-box {
+        margin-bottom: 15px;
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 700;
+            font-size: 11.5px;
+            color: $color-header;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px 10px;
+            border: $border;
+            border-radius: 4px;
+            font-size: 11px;
+            color: $color-text;
+        }
+    }
+
+    &-btn {
+        width: 100%;
+        padding: 12px 20px;
+        background: $primary;
+        color: white;
+        font-size: 13px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+
+    }
+}

@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+//Colors
+$color-green: #a4d037;
+$color-yellow: #fecd35;
+$color-red: #f05230;
+$color-title: #1f2d3d;
+$color-text: #62727a;
+$primary: #e0ba6f; //#02DEC2
+
+//Light Mode
+$color-lightgrey: #f1f1f1;
+$color-secondary-text: #979797;
+$color-border: #e1e1e1;
+$color-header-bg-light: #fff;
+$color-lightmode: #f8f8fa;
+$color-border-light: #eee;
+$color-secondary-bg-light: rgba(17, 61, 188, 0.04);
+$color-text-light: #5f5f5f;
+$box-shadow:0 2px 5px 0 rgba(0, 0, 0, .05);
+
+// Dark Mode
+$color-border-dark: rgba(250, 250, 250, 0.05);
+$color-header: #3e4347;
+$color-darkmode: #020202;
+$color-darkgrey: #15171a;
+$color-secondary-bg-dark: #020202;
+$color-text-dark: #fff;
+
+$border: 1px solid #d1d5da;
+
+//Fonts
+$font-sans: 'Open Sans', sans-serif;
+$heading-font:'Raleway', sans-serif;
+$font-size: 15px;
+$font-typo: 11px;
+$radius: 4px;
+$weight-light: 300;
+$weight-normal: 400;
+$weight-medium: 500;
+$weight-semi: 600;
+$weight-bold: 700;
+$weight-extra-bold: 900;
+$container: 80%;
+$container-max: 1356px;
+
+$breakpoints: (
+  'small': 480px,
+  'medium': 768px,
+  'large': 1024px,
+  'xlarge': 1200px,
+);
