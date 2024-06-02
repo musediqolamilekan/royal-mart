@@ -4,7 +4,6 @@ import Footer from "../components/shared/footer/Footer";
 import Header from "../components/shared/header/Header";
 import Drawer from "@/components/shared/header/Drawer";
 import LeftGrid from "@/components/homePage/LeftGrid";
-import "../css/style.css";
 
 const Layout = ({
   title,

@@ -56,7 +56,7 @@ const CategoryPage = () => {
         router.replace('/404');
       }
     }
-  }, [category]);
+  }, [category, router]);
 
   const CategoryComponent = validCategory ? categoryComponents[validCategory] : null;
 
