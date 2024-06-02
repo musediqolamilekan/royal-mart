@@ -227,3 +227,12 @@
 .drawer-slider .drawer {
     transform: translateX(-100%);
 }
+
+.search__btn {
+    display: none;
+
+    @include for-size(phone-only) {
+        display: block;
+        margin-right: 15px;
+    }
+}
